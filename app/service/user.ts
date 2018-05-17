@@ -2,7 +2,7 @@
  * @Author: Kevin Bolton
  * @Date: 2018-02-01 20:46:08
  * @Last Modified by: Kevin Bolton
- * @Last Modified time: 2018-05-16 13:30:45
+ * @Last Modified time: 2018-05-17 10:30:35
  */
 "use strict";
 
@@ -123,7 +123,7 @@ export default class UserService extends Service {
           // console.log(token, 'token');
 
           result.message = MSGLOGINSUCCESS;
-          result.data = [];
+          result.data = [{ role: doc.role }];
         } else {
           result.message = MSGLOGINFAIL;
           result.data = formatError();
